@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cube_all",
+    "textures": {
+      "all": "assorted_additions:block/polished_netherrack"
+    }
+  }
