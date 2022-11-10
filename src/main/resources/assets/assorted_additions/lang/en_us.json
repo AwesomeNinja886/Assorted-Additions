@@ -1,3 +1,8 @@
 {
-    "block.assorted_additions.polished_netherrack": "Polished Netherrack"
+    "block.assorted_additions.polished_netherrack": "Polished Netherrack",
+    "block.assorted_additions.budding_glowstone": "Budding Glowstone",
+    "block.assorted_additions.small_glowstone_bud": "Small Glowstone Bud",
+    "block.assorted_additions.medium_glowstone_bud": "Medium Glowstone Bud",
+    "block.assorted_additions.large_glowstone_bud": "Large Glowstone Bud",
+    "block.assorted_additions.glowstone_cluster": "Glowstone Cluster"
 }

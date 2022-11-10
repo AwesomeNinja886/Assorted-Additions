@@ -1,0 +1,11 @@
+  {
+  "parent": "item/amethyst_bud",
+  "textures": {
+    "layer0": "assorted_additions:block/medium_glowstone_bud"
+  },
+  "display": {
+    "fixed": {
+      "translation": [ 0, 6, 0 ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "render_type": "cutout_mipped",
+  "textures": {
+    "cross": "assorted_additions:block/small_glowstone_bud"
+  }
+}
