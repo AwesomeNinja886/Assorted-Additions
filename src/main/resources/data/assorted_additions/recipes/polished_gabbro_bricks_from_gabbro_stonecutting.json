@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "assorted_additions:gabbro"
+  },
+  "result": "assorted_additions:polished_gabbro_bricks"
+}
