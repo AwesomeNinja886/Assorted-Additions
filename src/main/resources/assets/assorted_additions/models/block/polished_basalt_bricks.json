@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "assorted_additions:block/polished_basalt_bricks_top",
+    "side": "assorted_additions:block/polished_basalt_bricks_side"
+  }
+}
