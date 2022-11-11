@@ -12,6 +12,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -22,22 +23,35 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModBlocks {
-    // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AssortedAdditions.MODID);
 
-    // STONE VARIANTS
+    // Polished Vanilla Blocks
     public static final RegistryObject<Block> POLISHED_NETHERRACK = registerBlock("polished_netherrack", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.NETHER).requiresCorrectToolForDrops().strength(0.4F).sound(SoundType.NETHERRACK)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> POLISHED_OBSIDIAN = registerBlock("polished_obsidian", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> POLISHED_BASALT = registerBlock("polished_basalt", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.BASALT)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    
+    // Stone Brick Variants
+    public static final RegistryObject<Block> SMOOTH_STONE_BRICKS = registerBlock("smooth_stone_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> STONE_TILES = registerBlock("stone_tiles", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
+    // Budding Glowstone
     public static final RegistryObject<Block> BUDDING_GLOWSTONE = registerBlock("budding_glowstone", () -> new BuddingGlowstoneBlock(BlockBehaviour.Properties.copy(Blocks.GLOWSTONE).randomTicks()), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> SMALL_GLOWSTONE_BUD = registerBlock("small_glowstone_bud", () -> new GlowstoneClusterBlock(9, 2, BlockBehaviour.Properties.copy(Blocks.GLOWSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> MEDIUM_GLOWSTONE_BUD = registerBlock("medium_glowstone_bud", () -> new GlowstoneClusterBlock(10, 2, BlockBehaviour.Properties.copy(Blocks.GLOWSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> LARGE_GLOWSTONE_BUD = registerBlock("large_glowstone_bud", () -> new GlowstoneClusterBlock(12, 1, BlockBehaviour.Properties.copy(Blocks.GLOWSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> GLOWSTONE_CLUSTER = registerBlock("glowstone_cluster", () -> new GlowstoneClusterBlock(16, 1, BlockBehaviour.Properties.copy(Blocks.GLOWSTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
+    // Gabbro
     public static final RegistryObject<Block> GABBRO = registerBlock("gabbro", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).requiresCorrectToolForDrops().strength(1.5F, 6.0F)), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> POLISHED_GABBRO = registerBlock("polished_gabbro", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).requiresCorrectToolForDrops().strength(1.5F, 6.0F)), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> POLISHED_GABBRO_BRICKS = registerBlock("polished_gabbro_bricks", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).requiresCorrectToolForDrops().strength(1.5F, 6.0F)), CreativeModeTab.TAB_BUILDING_BLOCKS);
     
+    // Remastered Classic Blocks
+    public static final RegistryObject<Block> CLASSIC_STONE = registerBlock("classic_stone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> CLASSIC_COBBLESTONE = registerBlock("classic_cobblestone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> RETRO_COBBLESTONE = registerBlock("retro_cobblestone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> GLOWING_OBSIDIAN = registerBlock("glowing_obsidian", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).strength(50f, 1200f).lightLevel(state -> 12)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);

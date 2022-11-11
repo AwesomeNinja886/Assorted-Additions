@@ -1,5 +1,10 @@
 {
     "block.assorted_additions.polished_netherrack": "Polished Netherrack",
+    "block.assorted_additions.polished_obsidian": "Polished Obsidian",
+    "block.assorted_additions.polished_basalt": "Polished Basalt",
+
+    "block.assorted_additions.smooth_stone_bricks": "Smooth Stone Bricks",
+    "block.assorted_additions.stone_tiles": "Stone Tiles",
 
     "block.assorted_additions.budding_glowstone": "Budding Glowstone",
     "block.assorted_additions.small_glowstone_bud": "Small Glowstone Bud",
@@ -9,5 +14,10 @@
 
     "block.assorted_additions.gabbro": "Gabbro",
     "block.assorted_additions.polished_gabbro": "Polished Gabbro",
-    "block.assorted_additions.polished_gabbro_bricks": "Polished Gabbro Bricks"
+    "block.assorted_additions.polished_gabbro_bricks": "Polished Gabbro Bricks",
+    
+    "block.assorted_additions.classic_stone": "Classic Stone",
+    "block.assorted_additions.classic_cobblestone": "Classic Cobblestone",
+    "block.assorted_additions.retro_cobblestone": "Retro Cobblestone",
+    "block.assorted_additions.glowing_obsidian": "Glowing Obsidian"
 }
