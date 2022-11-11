@@ -22,7 +22,9 @@ public class BuddingGlowstoneBlock extends Block {
         super(pProperties);
     }
     public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandomSource) {
-        if (pRandomSource.nextInt(GROWTH_CHANCE) == 0) {
+         // System.out.println("Ticking");
+         if (pRandomSource.nextInt(GROWTH_CHANCE) == 0) {
+           // System.out.println("Trying to grow cluster");
            Direction direction = DIRECTIONS[pRandomSource.nextInt(DIRECTIONS.length)];
            BlockPos blockpos = pPos.relative(direction);
            BlockState blockstate = pLevel.getBlockState(blockpos);
@@ -41,11 +43,10 @@ public class BuddingGlowstoneBlock extends Block {
               BlockState blockstate1 = block.defaultBlockState().setValue(GlowstoneClusterBlock.FACING, direction).setValue(GlowstoneClusterBlock.WATERLOGGED, Boolean.valueOf(blockstate.getFluidState().getType() == Fluids.WATER));
               pLevel.setBlockAndUpdate(blockpos, blockstate1);
            }
-  
-        }
-     }
-
-     public static boolean canClusterGrowAtState(BlockState p_152735_) {
-      return p_152735_.isAir() || p_152735_.is(Blocks.WATER) && p_152735_.getFluidState().getAmount() == 8;
-     }
+         }
+      }
+      
+      public static boolean canClusterGrowAtState(BlockState p_152735_) {
+         return p_152735_.isAir() || p_152735_.is(Blocks.WATER) && p_152735_.getFluidState().getAmount() == 8;
+      }
 }
