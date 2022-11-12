@@ -6,6 +6,7 @@ import com.awesomeninja.assorted_additions.AssortedAdditions;
 import com.awesomeninja.assorted_additions.block.custom.BuddingGlowstoneBlock;
 import com.awesomeninja.assorted_additions.block.custom.GlowstoneClusterBlock;
 import com.awesomeninja.assorted_additions.block.custom.QuicksandBlock;
+import com.awesomeninja.assorted_additions.block.custom.ValidPortalFrameBlock;
 import com.awesomeninja.assorted_additions.item.ModItems;
 
 import net.minecraft.world.item.BlockItem;
@@ -28,7 +29,7 @@ public class ModBlocks {
 
     // Polished Vanilla Blocks
     public static final RegistryObject<Block> POLISHED_NETHERRACK = registerBlock("polished_netherrack", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.NETHER).requiresCorrectToolForDrops().strength(0.4F).sound(SoundType.NETHERRACK)), CreativeModeTab.TAB_BUILDING_BLOCKS);
-    public static final RegistryObject<Block> POLISHED_OBSIDIAN = registerBlock("polished_obsidian", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> POLISHED_OBSIDIAN = registerBlock("polished_obsidian", () -> new ValidPortalFrameBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN)), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> POLISHED_BASALT_BRICKS = registerBlock("polished_basalt_bricks", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.BASALT)), CreativeModeTab.TAB_BUILDING_BLOCKS);
     
     // Stone Brick Variants
