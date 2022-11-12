@@ -5,6 +5,7 @@ import java.util.function.Supplier;
 import com.awesomeninja.assorted_additions.AssortedAdditions;
 import com.awesomeninja.assorted_additions.block.custom.BuddingGlowstoneBlock;
 import com.awesomeninja.assorted_additions.block.custom.GlowstoneClusterBlock;
+import com.awesomeninja.assorted_additions.block.custom.QuicksandBlock;
 import com.awesomeninja.assorted_additions.item.ModItems;
 
 import net.minecraft.world.item.BlockItem;
@@ -52,9 +53,20 @@ public class ModBlocks {
     public static final RegistryObject<Block> RETRO_COBBLESTONE = registerBlock("retro_cobblestone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> GLOWING_OBSIDIAN = registerBlock("glowing_obsidian", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).strength(50f, 1200f).lightLevel(state -> 12)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
+    // Quicksand
+    //public static final RegistryObject<Block> QUICKSAND = registerBlock("quicksand", () -> new QuicksandBlock(ModItems.QUICKSAND_BUCKET.get(), BlockBehaviour.Properties.copy(Blocks.SAND).dynamicShape()), CreativeModeTab.TAB_MISC, false);
+    
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
+        return toReturn;
+    }
+
+    public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab, boolean registerItem) {
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        if (registerItem) {
+            registerBlockItem(name, toReturn, tab);
+        }
         return toReturn;
     }
 
