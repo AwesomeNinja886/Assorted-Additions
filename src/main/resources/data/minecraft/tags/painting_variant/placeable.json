@@ -1,0 +1,11 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:earth",
+        "minecraft:fire",
+        "minecraft:water",
+        "minecraft:wind",
+        "assorted_additions:ender",
+        "assorted_additions:item"
+    ]
+}

@@ -2,6 +2,7 @@ package com.awesomeninja.assorted_additions;
 
 import com.awesomeninja.assorted_additions.block.ModBlocks;
 import com.awesomeninja.assorted_additions.item.ModItems;
+import com.awesomeninja.assorted_additions.misc.painting.ModPaintings;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.level.block.Blocks;
@@ -32,10 +33,12 @@ public class AssortedAdditions
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        // Register the Deferred Register to the mod event bus so blocks get registered
+        
         ModBlocks.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so items get registered
+        
         ModItems.register(modEventBus);
+        
+        ModPaintings.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
