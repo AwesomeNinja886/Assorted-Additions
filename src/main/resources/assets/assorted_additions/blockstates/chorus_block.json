@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "assorted_additions:block/chorus_block",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "assorted_additions:block/chorus_block"
+    },
+    "axis=z": {
+      "model": "assorted_additions:block/chorus_block",
+      "x": 90
+    }
+  }
+}

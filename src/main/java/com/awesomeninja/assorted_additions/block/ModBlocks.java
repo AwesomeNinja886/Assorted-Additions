@@ -57,7 +57,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> GLOWING_OBSIDIAN = registerBlock("glowing_obsidian", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).strength(50f, 1200f).lightLevel(state -> 12)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     // Chorus Wood
-    public static final RegistryObject<Block> CHORUS_PLANKS = registerBlock("chorus_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).lightLevel(state -> 2).strength(2.0F, 3.0F).sound(SoundType.WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> CHORUS_BLOCK = registerBlock("chorus_block", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(3.0F, 4.0F).sound(SoundType.WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> CHORUS_PLANKS = registerBlock("chorus_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(3.0F, 4.0F).sound(SoundType.WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     // Quicksand
     //public static final RegistryObject<Block> QUICKSAND = registerBlock("quicksand", () -> new QuicksandBlock(ModItems.QUICKSAND_BUCKET.get(), BlockBehaviour.Properties.copy(Blocks.SAND).dynamicShape()), CreativeModeTab.TAB_MISC, false);
