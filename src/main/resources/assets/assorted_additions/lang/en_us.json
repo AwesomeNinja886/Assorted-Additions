@@ -5,6 +5,7 @@
 
     "block.assorted_additions.smooth_stone_bricks": "Smooth Stone Bricks",
     "block.assorted_additions.stone_tiles": "Stone Tiles",
+    "block.assorted_additions.nether_brick_tiles": "Nether Brick Tiles",
 
     "block.assorted_additions.budding_glowstone": "Budding Glowstone",
     "block.assorted_additions.small_glowstone_bud": "Small Glowstone Bud",
@@ -19,5 +20,7 @@
     "block.assorted_additions.classic_stone": "Classic Stone",
     "block.assorted_additions.classic_cobblestone": "Classic Cobblestone",
     "block.assorted_additions.retro_cobblestone": "Retro Cobblestone",
-    "block.assorted_additions.glowing_obsidian": "Glowing Obsidian"
+    "block.assorted_additions.glowing_obsidian": "Glowing Obsidian",
+
+    "block.assorted_additions.chorus_planks": "Chorus Planks"
 }
