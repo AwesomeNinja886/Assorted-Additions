@@ -20,7 +20,6 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class CyanRoseBlock extends FlowerBlock {
-    private boolean processingSomething;
     public CyanRoseBlock(Properties pProperties) {
         super(MobEffects.ABSORPTION, 10, pProperties);
     }
@@ -35,19 +34,16 @@ public class CyanRoseBlock extends FlowerBlock {
         double d0 = (double)pPos.getX() + vec3.x;
         double d1 = (double)pPos.getZ() + vec3.z;
         
-        if (processingSomething) {
-            for(int i = 0; i < 3; ++i) {
-                if (pRandomSource.nextBoolean()) {
-                    pLevel.addParticle(ParticleTypes.ENCHANT, d0 + pRandomSource.nextDouble() / 5.0D, (double)pPos.getY() + (0.5D - pRandomSource.nextDouble()), d1 + pRandomSource.nextDouble() / 5.0D, 0.0D, 0.0D, 0.0D);
-                }
+        for(int i = 0; i < 3; ++i) {
+            if (pRandomSource.nextBoolean()) {
+                pLevel.addParticle(ParticleTypes.ENCHANT, d0 + pRandomSource.nextDouble() / 5.0D, (double)pPos.getY() + (0.5D - pRandomSource.nextDouble()), d1 + pRandomSource.nextDouble() / 5.0D, 0.0D, 0.0D, 0.0D);
             }
-    }
+        }
   
     }
     public void entityInside(BlockState p_58238_, Level p_58239_, BlockPos pPos, Entity pEntity) {
         if (!p_58239_.isClientSide()) {
             if (pEntity instanceof ItemEntity pItemEntity) {
-                processingSomething = true;
                 if (pItemEntity.getItem().getItem() == Blocks.STONE.asItem()
                     || pItemEntity.getItem().getItem() == Blocks.COBBLESTONE.asItem()
                     || pItemEntity.getItem().getItem() == ModBlocks.CLASSIC_COBBLESTONE.get().asItem()
