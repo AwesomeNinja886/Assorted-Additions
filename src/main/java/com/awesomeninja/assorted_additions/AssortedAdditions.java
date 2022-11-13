@@ -1,6 +1,7 @@
 package com.awesomeninja.assorted_additions;
 
 import com.awesomeninja.assorted_additions.block.ModBlocks;
+import com.awesomeninja.assorted_additions.effect.ModEffects;
 import com.awesomeninja.assorted_additions.item.ModItems;
 import com.awesomeninja.assorted_additions.misc.painting.ModPaintings;
 import com.mojang.logging.LogUtils;
@@ -39,6 +40,8 @@ public class AssortedAdditions
         ModItems.register(modEventBus);
         
         ModPaintings.register(modEventBus);
+
+        ModEffects.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
