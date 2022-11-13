@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "minecraft:stone"
+  },
+  "result": "assorted_additions:smooth_stone_bricks"
+}

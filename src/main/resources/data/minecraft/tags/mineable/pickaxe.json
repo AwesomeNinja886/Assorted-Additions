@@ -1,6 +1,23 @@
 {
     "replace": "false",
     "values": [
-        "assorted_additions:polished_netherrack"
+        "assorted_additions:polished_netherrack",
+        "assorted_additions:polished_obsidian",
+        "assorted_additions:polished_basalt_bricks",
+        "assorted_additions:smooth_stone_bricks",
+        "assorted_additions:stone_tiles",
+        "assorted_additions:nether_brick_tiles",
+        "assorted_additions:budding_glowstone",
+        "assorted_additions:small_glowstone_bud",
+        "assorted_additions:medium_glowstone_bud",
+        "assorted_additions:large_glowstone_bud",
+        "assorted_additions:glowstone_cluster",
+        "assorted_additions:gabbro",
+        "assorted_additions:polished_gabbro",
+        "assorted_additions:polished_gabbro_bricks",
+        "assorted_additions:classic_stone",
+        "assorted_additions:classic_cobblestone",
+        "assorted_additions:retro_cobblestone",
+        "assorted_additions:glowing_obsidian"
     ]
 }
