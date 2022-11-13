@@ -56,7 +56,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CLASSIC_STONE = registerBlock("classic_stone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> CLASSIC_COBBLESTONE = registerBlock("classic_cobblestone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> RETRO_COBBLESTONE = registerBlock("retro_cobblestone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
-    public static final RegistryObject<Block> CYAN_ROSE = registerBlock("cyan_rose", () -> new CyanRoseBlock(BlockBehaviour.Properties.of(Material.PLANT).lightLevel(state -> 3).sound(SoundType.GLOW_LICHEN)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> CYAN_ROSE = registerBlock("cyan_rose", () -> new CyanRoseBlock(BlockBehaviour.Properties.of(Material.PLANT).lightLevel(state -> 3).sound(SoundType.GLOW_LICHEN).noCollission()), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> GLOWING_OBSIDIAN = registerBlock("glowing_obsidian", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).strength(50f, 1200f).lightLevel(state -> 12)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     // Chorus Wood
