@@ -1,0 +1,8 @@
+{
+    "type": "assorted_additions:cyan_rose_converting",
+    "count": 1,
+    "ingredient": {
+      "item": "assorted_additions:polished_obsidian"
+    },
+    "result": "assorted_additions:glowing_obsidian"
+  }
