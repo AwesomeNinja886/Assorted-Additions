@@ -1,18 +1,22 @@
 package com.awesomeninja.assorted_additions.block.custom;
 
+import java.util.Optional;
+
 import com.awesomeninja.assorted_additions.block.ModBlocks;
+import com.awesomeninja.assorted_additions.recipe.CyanRoseConversionRecipe;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
@@ -41,13 +45,14 @@ public class CyanRoseBlock extends FlowerBlock {
         }
   
     }
-    public void entityInside(BlockState p_58238_, Level p_58239_, BlockPos pPos, Entity pEntity) {
-        if (!p_58239_.isClientSide()) {
+    public void entityInside(BlockState pBlockState, Level pLevel, BlockPos pPos, Entity pEntity) {
+        if (!pLevel.isClientSide()) {
             if (pEntity instanceof ItemEntity pItemEntity) {
-                if (pItemEntity.getItem().getItem() == Blocks.STONE.asItem()
-                    || pItemEntity.getItem().getItem() == Blocks.COBBLESTONE.asItem()
-                    || pItemEntity.getItem().getItem() == ModBlocks.CLASSIC_COBBLESTONE.get().asItem()
-                    || pItemEntity.getItem().getItem() == ModBlocks.POLISHED_OBSIDIAN.get().asItem()) {
+                ItemStack pItem = pItemEntity.getItem();
+                SimpleContainer container = new SimpleContainer(1);
+                container.setItem(0, pItem);
+                Optional<CyanRoseConversionRecipe> recipe = pLevel.getRecipeManager().getRecipeFor(CyanRoseConversionRecipe.Type.INSTANCE, container, pLevel);
+                if (recipe.isPresent()) {
                     // Code based on Create's bulk processing, credits to the Create team
                     // The specific method is decrementProcessingTime, in the class InWorldProcessing
                     CompoundTag nbt = pItemEntity.getPersistentData();
@@ -56,24 +61,13 @@ public class CyanRoseBlock extends FlowerBlock {
                     }
                     CompoundTag assortedAdditionsData = nbt.getCompound("AssortedAdditionsData");
                     if (!assortedAdditionsData.contains("CyanRoseConvertingTime")) {
-                        int timeModifierForStackSize = ((pItemEntity.getItem().getCount() - 1) / 16) + 1;
-                        int convertingTime =(int) (20 * timeModifierForStackSize) + 1;
+                        int timeModifierForStackSize = ((pItem.getCount() - 1) / 16) + 1;
+                        int convertingTime = (int) (10 * timeModifierForStackSize) + 1;
                         assortedAdditionsData.putInt("CyanRoseConvertingTime", convertingTime);
                     }
                     int value = assortedAdditionsData.getInt("CyanRoseConvertingTime");
                     if (value == 0) {
-                        if (pItemEntity.getItem().getItem() == Blocks.STONE.asItem()) {
-                            pItemEntity.setItem(new ItemStack(ModBlocks.CLASSIC_STONE.get().asItem(), pItemEntity.getItem().getCount()));
-                        }
-                        else if (pItemEntity.getItem().getItem() == Blocks.COBBLESTONE.asItem()) {
-                            pItemEntity.setItem(new ItemStack(ModBlocks.CLASSIC_COBBLESTONE.get().asItem(), pItemEntity.getItem().getCount()));
-                        }
-                        else if (pItemEntity.getItem().getItem() == ModBlocks.CLASSIC_COBBLESTONE.get().asItem()) {
-                            pItemEntity.setItem(new ItemStack(ModBlocks.RETRO_COBBLESTONE.get().asItem(), pItemEntity.getItem().getCount()));
-                        }
-                        else if (pItemEntity.getItem().getItem() == ModBlocks.POLISHED_OBSIDIAN.get().asItem()) {
-                            pItemEntity.setItem(new ItemStack(ModBlocks.GLOWING_OBSIDIAN.get().asItem(), pItemEntity.getItem().getCount()));
-                        }
+                        pItemEntity.setItem(new ItemStack(recipe.get().getResultItem().getItem(), pItem.getCount()));
                     }
                     assortedAdditionsData.putInt("CyanRoseConvertingTime", value - 1);
                 }
