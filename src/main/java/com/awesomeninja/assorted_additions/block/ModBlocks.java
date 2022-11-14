@@ -7,6 +7,7 @@ import com.awesomeninja.assorted_additions.block.custom.BuddingGlowstoneBlock;
 import com.awesomeninja.assorted_additions.block.custom.ChorusLogBlock;
 import com.awesomeninja.assorted_additions.block.custom.CyanRoseBlock;
 import com.awesomeninja.assorted_additions.block.custom.GlowstoneClusterBlock;
+import com.awesomeninja.assorted_additions.block.custom.PottedCyanRoseBlock;
 import com.awesomeninja.assorted_additions.block.custom.QuicksandBlock;
 import com.awesomeninja.assorted_additions.block.custom.ValidPortalFrameBlock;
 import com.awesomeninja.assorted_additions.item.ModItems;
@@ -57,6 +58,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CLASSIC_COBBLESTONE = registerBlock("classic_cobblestone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> RETRO_COBBLESTONE = registerBlock("retro_cobblestone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> CYAN_ROSE = registerBlock("cyan_rose", () -> new CyanRoseBlock(BlockBehaviour.Properties.of(Material.PLANT).lightLevel(state -> 3).sound(SoundType.GLOW_LICHEN).noCollission()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> POTTED_CYAN_ROSE = BLOCKS.register("potted_cyan_rose", () -> new PottedCyanRoseBlock(BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).lightLevel(state -> 3)));
     public static final RegistryObject<Block> GLOWING_OBSIDIAN = registerBlock("glowing_obsidian", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).strength(50f, 1200f).lightLevel(state -> 12)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     // Chorus Wood
