@@ -26,5 +26,13 @@
 
     "block.assorted_additions.chorus_block": "Chorus Block",
     "block.assorted_additions.stripped_chorus_block": "Stripped Chorus Block",
-    "block.assorted_additions.chorus_planks": "Chorus Planks"
+    "block.assorted_additions.chorus_planks": "Chorus Planks",
+    "block.assorted_additions.chorus_slab": "Chorus Slab",
+    "block.assorted_additions.chorus_fence": "Chorus Fence",
+    "block.assorted_additions.chorus_stairs": "Chorus Stairs",
+    "block.assorted_additions.chorus_button": "Chorus Button",
+    "block.assorted_additions.chorus_pressure_plate": "Chorus Pressure Plate",
+    "block.assorted_additions.chorus_door": "Chorus Door",
+    "block.assorted_additions.chorus_trapdoor": "Chorus Trapdoor",
+    "block.assorted_additions.chorus_fence_gate": "Chorus Fence Gate"
 }
