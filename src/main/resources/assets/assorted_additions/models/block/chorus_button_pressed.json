@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_pressed",
+  "textures": {
+    "texture": "assorted_additions:block/chorus_planks"
+  }
+}

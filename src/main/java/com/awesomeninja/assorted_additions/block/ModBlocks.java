@@ -17,8 +17,16 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.FenceBlock;
+import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.TrapDoorBlock;
+import net.minecraft.world.level.block.WoodButtonBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
@@ -62,10 +70,18 @@ public class ModBlocks {
     public static final RegistryObject<Block> GLOWING_OBSIDIAN = registerBlock("glowing_obsidian", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).strength(50f, 1200f).lightLevel(state -> 12)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     // Chorus Wood
-    public static final RegistryObject<Block> CHORUS_BLOCK = registerBlock("chorus_block", () -> new ChorusLogBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(3.0F, 4.0F).sound(SoundType.WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
-    public static final RegistryObject<Block> STRIPPED_CHORUS_BLOCK = registerBlock("stripped_chorus_block", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(3.0F, 4.0F).sound(SoundType.WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
-    public static final RegistryObject<Block> CHORUS_PLANKS = registerBlock("chorus_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(3.0F, 4.0F).sound(SoundType.WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
-
+    public static final RegistryObject<Block> CHORUS_BLOCK = registerBlock("chorus_block", () -> new ChorusLogBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F, 4.0F).sound(SoundType.WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> STRIPPED_CHORUS_BLOCK = registerBlock("stripped_chorus_block", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F, 4.0F).sound(SoundType.WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> CHORUS_PLANKS = registerBlock("chorus_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F, 4.0F).sound(SoundType.WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> CHORUS_SLAB = registerBlock("chorus_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F, 4.0F).sound(SoundType.WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> CHORUS_FENCE = registerBlock("chorus_fence", () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F, 4.0F).sound(SoundType.WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> CHORUS_STAIRS = registerBlock("chorus_stairs", () -> new StairBlock(CHORUS_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F, 4.0F).sound(SoundType.WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> CHORUS_BUTTON = registerBlock("chorus_button", () -> new WoodButtonBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F, 4.0F).sound(SoundType.WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> CHORUS_PRESSURE_PLATE = registerBlock("chorus_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F, 4.0F).sound(SoundType.WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> CHORUS_DOOR = registerBlock("chorus_door", () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F, 4.0F).sound(SoundType.WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> CHORUS_TRAPDOOR = registerBlock("chorus_trapdoor", () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F, 4.0F).sound(SoundType.WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> CHORUS_FENCE_GATE = registerBlock("chorus_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F, 4.0F).sound(SoundType.WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    
     // Quicksand
     //public static final RegistryObject<Block> QUICKSAND = registerBlock("quicksand", () -> new QuicksandBlock(ModItems.QUICKSAND_BUCKET.get(), BlockBehaviour.Properties.copy(Blocks.SAND).dynamicShape()), CreativeModeTab.TAB_MISC, false);
     
