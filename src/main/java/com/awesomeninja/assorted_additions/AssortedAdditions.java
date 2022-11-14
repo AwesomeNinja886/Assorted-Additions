@@ -4,6 +4,7 @@ import com.awesomeninja.assorted_additions.block.ModBlocks;
 import com.awesomeninja.assorted_additions.effect.ModEffects;
 import com.awesomeninja.assorted_additions.item.ModItems;
 import com.awesomeninja.assorted_additions.misc.painting.ModPaintings;
+import com.awesomeninja.assorted_additions.recipe.ModRecipes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.level.block.Blocks;
@@ -42,6 +43,8 @@ public class AssortedAdditions
         ModPaintings.register(modEventBus);
 
         ModEffects.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
