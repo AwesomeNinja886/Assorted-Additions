@@ -20,6 +20,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SlabBlock;
@@ -70,6 +71,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> GLOWING_OBSIDIAN = registerBlock("glowing_obsidian", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).strength(50f, 1200f).lightLevel(state -> 12)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     // Chorus Wood
+    public static final RegistryObject<Block> POTTED_CHORUS_FLOWER = BLOCKS.register("potted_chorus_flower", () -> new FlowerPotBlock(Blocks.CHORUS_FLOWER, BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM)));
     public static final RegistryObject<Block> CHORUS_BLOCK = registerBlock("chorus_block", () -> new ChorusLogBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F, 4.0F).sound(SoundType.WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> STRIPPED_CHORUS_BLOCK = registerBlock("stripped_chorus_block", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F, 4.0F).sound(SoundType.WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> CHORUS_PLANKS = registerBlock("chorus_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F, 4.0F).sound(SoundType.WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
