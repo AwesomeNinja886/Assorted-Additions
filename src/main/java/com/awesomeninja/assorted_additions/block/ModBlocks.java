@@ -12,9 +12,12 @@ import com.awesomeninja.assorted_additions.block.custom.QuicksandBlock;
 import com.awesomeninja.assorted_additions.block.custom.ValidPortalFrameBlock;
 import com.awesomeninja.assorted_additions.item.ModItems;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DoorBlock;
@@ -30,6 +33,7 @@ import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WoodButtonBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -73,7 +77,7 @@ public class ModBlocks {
     // public static final RegistryObject<Block> CLASSIC_LOG = registerBlock("classic_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     // Remastered Education Edition Blocks
-    public static final RegistryObject<Block> REINFORCED_GLASS = registerBlock("reinforced_glass", () -> new GlassBlock(BlockBehaviour.Properties.of(Material.GLASS).strength(25.0F, 1200.0F).sound(SoundType.GLASS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> REINFORCED_GLASS = registerBlock("reinforced_glass", () -> new GlassBlock(BlockBehaviour.Properties.of(Material.GLASS).strength(25.0F, 1200.0F).sound(SoundType.GLASS).noOcclusion().isValidSpawn(ModBlocks::never).isRedstoneConductor(ModBlocks::always).isSuffocating(ModBlocks::never).isViewBlocking(ModBlocks::never)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     // Chorus Wood
     public static final RegistryObject<Block> POTTED_CHORUS_FLOWER = BLOCKS.register("potted_chorus_flower", () -> new FlowerPotBlock(Blocks.CHORUS_FLOWER, BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM)));
@@ -115,5 +119,29 @@ public class ModBlocks {
 
     public static void register(IEventBus modEventBus) {
         BLOCKS.register(modEventBus);
+    }
+    /**
+    * Method copied from {@link net.minecraft.world.level.block.Blocks}
+    */
+    private static Boolean never(BlockState p_50779_, BlockGetter p_50780_, BlockPos p_50781_, EntityType<?> p_50782_) {
+        return (boolean)false;
+    }
+    /**
+    * Method copied from {@link net.minecraft.world.level.block.Blocks}
+    */
+    private static Boolean never(BlockState p_50779_, BlockGetter p_50780_, BlockPos p_50781_) {
+        return false;
+    }
+    /**
+    * Method copied from {@link net.minecraft.world.level.block.Blocks}
+    */
+    private static boolean always(BlockState p_50775_, BlockGetter p_50776_, BlockPos p_50777_, EntityType<?> p_50782_) {
+        return true;
+    }
+    /**
+    * Method copied from {@link net.minecraft.world.level.block.Blocks}
+    */
+    private static boolean always(BlockState p_50775_, BlockGetter p_50776_, BlockPos p_50777_) {
+        return true;
     }
 }
