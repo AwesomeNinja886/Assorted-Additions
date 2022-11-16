@@ -21,6 +21,7 @@ import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.GlassBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SlabBlock;
@@ -71,6 +72,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> GLOWING_OBSIDIAN = registerBlock("glowing_obsidian", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).strength(50f, 1200f).lightLevel(state -> 12)), CreativeModeTab.TAB_BUILDING_BLOCKS);
     // public static final RegistryObject<Block> CLASSIC_LOG = registerBlock("classic_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
+    // Remastered Education Edition Blocks
+    public static final RegistryObject<Block> REINFORCED_GLASS = registerBlock("reinforced_glass", () -> new GlassBlock(BlockBehaviour.Properties.of(Material.GLASS).strength(25.0F, 1200.0F).sound(SoundType.GLASS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+
     // Chorus Wood
     public static final RegistryObject<Block> POTTED_CHORUS_FLOWER = BLOCKS.register("potted_chorus_flower", () -> new FlowerPotBlock(Blocks.CHORUS_FLOWER, BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM)));
     public static final RegistryObject<Block> CHORUS_BLOCK = registerBlock("chorus_block", () -> new ChorusLogBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F, 4.0F).sound(SoundType.WOOD)), CreativeModeTab.TAB_BUILDING_BLOCKS);
@@ -88,6 +92,9 @@ public class ModBlocks {
     // Quicksand
     //public static final RegistryObject<Block> QUICKSAND = registerBlock("quicksand", () -> new QuicksandBlock(ModItems.QUICKSAND_BUCKET.get(), BlockBehaviour.Properties.copy(Blocks.SAND).dynamicShape()), CreativeModeTab.TAB_MISC, false);
     
+    // Compacted Items
+    public static final RegistryObject<Block> PACKED_LEATHER = registerBlock("packed_leather", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
