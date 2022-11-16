@@ -74,7 +74,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> CYAN_ROSE = registerBlock("cyan_rose", () -> new CyanRoseBlock(BlockBehaviour.Properties.of(Material.PLANT).lightLevel(state -> 3).sound(SoundType.GLOW_LICHEN).noCollission()), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> POTTED_CYAN_ROSE = BLOCKS.register("potted_cyan_rose", () -> new PottedCyanRoseBlock(BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM).lightLevel(state -> 3)));
     public static final RegistryObject<Block> GLOWING_OBSIDIAN = registerBlock("glowing_obsidian", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).strength(50f, 1200f).lightLevel(state -> 12)), CreativeModeTab.TAB_BUILDING_BLOCKS);
-    // public static final RegistryObject<Block> CLASSIC_LOG = registerBlock("classic_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    // public static final RegistryObject<Block> CLASSIC_LOG = registerBlock("classic_log", () -> new ClassicLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    // public static final RegistryObject<Block> STRIPPED_CLASSIC_LOG = registerBlock("classic_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     // Remastered Education Edition Blocks
     public static final RegistryObject<Block> REINFORCED_GLASS = registerBlock("reinforced_glass", () -> new GlassBlock(BlockBehaviour.Properties.of(Material.GLASS).strength(25.0F, 1200.0F).sound(SoundType.GLASS).noOcclusion().isValidSpawn(ModBlocks::never).isRedstoneConductor(ModBlocks::always).isSuffocating(ModBlocks::never).isViewBlocking(ModBlocks::never)), CreativeModeTab.TAB_BUILDING_BLOCKS);
