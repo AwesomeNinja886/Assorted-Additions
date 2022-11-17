@@ -19,12 +19,12 @@
 			"name": "Middle",
 			"from": [2, 0, 2],
 			"to": [14, 16, 14],
-			"color": 0,
+			"color": 3,
 			"faces": {
-				"north": {"uv": [0, 0, 12, 16], "texture": "#column"},
-				"east": {"uv": [0, 0, 12, 16], "texture": "#column"},
-				"south": {"uv": [0, 0, 12, 16], "texture": "#column"},
-				"west": {"uv": [0, 0, 12, 16], "texture": "#column"}
+				"north": {"uv": [2, 0, 14, 16], "texture": "#column"},
+				"east": {"uv": [2, 0, 14, 16], "texture": "#column"},
+				"south": {"uv": [2, 0, 14, 16], "texture": "#column"},
+				"west": {"uv": [2, 0, 14, 16], "texture": "#column"}
 			}
 		},
 		{

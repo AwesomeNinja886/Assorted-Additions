@@ -1,85 +1,49 @@
 {
     "multipart": [
         {   "when": { "axis": "y", "top": "true", "bottom": "true" },
-            "apply": [
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_middle" },
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_top" },
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_bottom" }
-            ]
+            "apply": { "model": "assorted_additions:block/chiseled_deepslate_pillar_both" }
         },
         {   "when": { "axis": "x", "top": "true", "bottom": "true" },
-            "apply": [
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_middle", "x": 90, "y": 90 },
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_top", "x": 90, "y": 90 },
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_bottom", "x": 90, "y": 90 }
-            ]
+            "apply": { "model": "assorted_additions:block/chiseled_deepslate_pillar_both", "x": 90, "y": 90 }
         },
         {   "when": { "axis": "z", "top": "true", "bottom": "true" },
-            "apply": [
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_middle", "x": 90 },
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_top", "x": 90 },
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_bottom", "x": 90 }
-            ]
+            "apply": { "model": "assorted_additions:block/chiseled_deepslate_pillar_both", "x": 90 }
         },
 
 
 
         {   "when": { "axis": "y", "top": "true", "bottom": "false" },
-            "apply": [
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_middle" },
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_top" }
-            ]
+            "apply": { "model": "assorted_additions:block/chiseled_deepslate_pillar_top" }
         },
         {   "when": { "axis": "x", "top": "true", "bottom": "false" },
-            "apply": [
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_middle", "x": 90, "y": 90 },
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_top", "x": 90, "y": 90 }
-            ]
+            "apply": { "model": "assorted_additions:block/chiseled_deepslate_pillar_top", "x": 90, "y": 90 }
         },
         {   "when": { "axis": "z", "top": "true", "bottom": "false" },
-            "apply": [
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_middle", "x": 90 },
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_top", "x": 90 }
-            ]
+            "apply": { "model": "assorted_additions:block/chiseled_deepslate_pillar_top", "x": 90 }
         },
 
 
 
         {   "when": { "axis": "y", "top": "false", "bottom": "true" },
-            "apply": [
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_middle" },
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_bottom" }
-            ]
+            "apply": { "model": "assorted_additions:block/chiseled_deepslate_pillar_bottom" }
         },
         {   "when": { "axis": "x", "top": "false", "bottom": "true" },
-            "apply": [
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_middle", "x": 90, "y": 90 },
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_bottom", "x": 90, "y": 90 }
-            ]
+            "apply": { "model": "assorted_additions:block/chiseled_deepslate_pillar_bottom", "x": 90, "y": 90 }
         },
         {   "when": { "axis": "z", "top": "false", "bottom": "true" },
-            "apply": [
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_middle", "x": 90 },
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_bottom", "x": 90 }
-            ]
+            "apply": { "model": "assorted_additions:block/chiseled_deepslate_pillar_bottom", "x": 90 }
         },
 
 
 
         {   "when": { "axis": "y", "top": "false", "bottom": "false" },
-            "apply": [
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_middle" }
-            ]
+            "apply": { "model": "assorted_additions:block/chiseled_deepslate_pillar_middle" }
         },
         {   "when": { "axis": "x", "top": "false", "bottom": "false" },
-            "apply": [
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_middle", "x": 90, "y": 90 }
-            ]
+            "apply": { "model": "assorted_additions:block/chiseled_deepslate_pillar_middle", "x": 90, "y": 90 }
         },
         {   "when": { "axis": "z", "top": "false", "bottom": "false" },
-            "apply": [
-                { "model": "assorted_additions:block/chiseled_deepslate_pillar_middle", "x": 90 }
-            ]
+            "apply": { "model": "assorted_additions:block/chiseled_deepslate_pillar_middle", "x": 90 }
         }
     ]
 }
