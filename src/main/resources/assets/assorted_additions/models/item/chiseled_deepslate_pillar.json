@@ -1,0 +1,8 @@
+{
+  "parent": "assorted_additions:block/chiseled_pillar_inventory",
+  "textures": {
+    "cap": "assorted_additions:block/chiseled_deepslate_pillar_cap",
+    "column": "assorted_additions:block/chiseled_deepslate_pillar_side",
+    "end": "minecraft:block/polished_deepslate"
+  }
+}

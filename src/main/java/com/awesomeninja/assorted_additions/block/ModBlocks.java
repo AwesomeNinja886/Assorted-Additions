@@ -4,6 +4,7 @@ import java.util.function.Supplier;
 
 import com.awesomeninja.assorted_additions.AssortedAdditions;
 import com.awesomeninja.assorted_additions.block.custom.BuddingGlowstoneBlock;
+import com.awesomeninja.assorted_additions.block.custom.ChiseledPillarBlock;
 import com.awesomeninja.assorted_additions.block.custom.ChorusLogBlock;
 import com.awesomeninja.assorted_additions.block.custom.CyanRoseBlock;
 import com.awesomeninja.assorted_additions.block.custom.GlowstoneClusterBlock;
@@ -54,6 +55,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> STONE_TILES = registerBlock("stone_tiles", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> NETHER_BRICK_TILES = registerBlock("nether_brick_tiles", () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
+    // Chiseled Pillars
+    public static final RegistryObject<Block> CHISELED_DEEPSLATE_PILLAR = registerBlock("chiseled_deepslate_pillar", () -> new ChiseledPillarBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     // Budding Glowstone
     public static final RegistryObject<Block> BUDDING_GLOWSTONE = registerBlock("budding_glowstone", () -> new BuddingGlowstoneBlock(BlockBehaviour.Properties.copy(Blocks.GLOWSTONE).randomTicks()), CreativeModeTab.TAB_BUILDING_BLOCKS);
