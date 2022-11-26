@@ -24,64 +24,77 @@ public class ChiseledPillarBlock extends Block {
     public static final BooleanProperty BOTTOM = BooleanProperty.create("bottom");
 
     protected static final VoxelShape CENTER_SHAPE_Y = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D);
+    /* 
     protected static final VoxelShape TOP_SHAPE_Y = Block.box(0.0D, 10.0D, 0.0D, 16.0D, 6.0D, 16.0D);
     protected static final VoxelShape BOTTOM_SHAPE_Y = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 6.0D, 16.0D);
     protected static final VoxelShape BOTH_SHAPE_Y = Shapes.or(TOP_SHAPE_Y, Shapes.or(CENTER_SHAPE_Y, BOTTOM_SHAPE_Y));
     protected static final VoxelShape TOP_ONLY_SHAPE_Y = Shapes.or(CENTER_SHAPE_Y, TOP_SHAPE_Y);
     protected static final VoxelShape BOTTOM_ONLY_SHAPE_Y = Shapes.or(CENTER_SHAPE_Y, BOTTOM_SHAPE_Y);
+     */
 
     protected static final VoxelShape CENTER_SHAPE_X = Block.box(0.0D, 2.0D, 2.0D, 16.0D, 14.0D, 14.0D);
+    /*
     protected static final VoxelShape TOP_SHAPE_X = Block.box(10.0D, 0.0D, 0.0D, 6.0D, 16.0D, 16.0D);
     protected static final VoxelShape BOTTOM_SHAPE_X = Block.box(0.0D, 0.0D, 0.0D, 6.0D, 16.0D, 16.0D);
     protected static final VoxelShape BOTH_SHAPE_X = Shapes.or(TOP_SHAPE_X, Shapes.or(CENTER_SHAPE_X, BOTTOM_SHAPE_X));
     protected static final VoxelShape TOP_ONLY_SHAPE_X = Shapes.or(CENTER_SHAPE_X, TOP_SHAPE_X);
     protected static final VoxelShape BOTTOM_ONLY_SHAPE_X = Shapes.or(CENTER_SHAPE_X, BOTTOM_SHAPE_X);
+     */
 
     protected static final VoxelShape CENTER_SHAPE_Z = Block.box(2.0D, 2.0D, 0.0D, 14.0D, 14.0D, 16.0D);
+    /*
     protected static final VoxelShape TOP_SHAPE_Z = Block.box(0.0D, 0.0D, 10.0D, 16.0D, 16.0D, 6.0D);
     protected static final VoxelShape BOTTOM_SHAPE_Z = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 6.0D);
     protected static final VoxelShape BOTH_SHAPE_Z = Shapes.or(TOP_SHAPE_Z, Shapes.or(CENTER_SHAPE_Z, BOTTOM_SHAPE_Z));
     protected static final VoxelShape TOP_ONLY_SHAPE_Z = Shapes.or(CENTER_SHAPE_Z, TOP_SHAPE_Z);
     protected static final VoxelShape BOTTOM_ONLY_SHAPE_Z = Shapes.or(CENTER_SHAPE_Z, BOTTOM_SHAPE_Z);
+     */
 
     public ChiseledPillarBlock(Properties p_55926_) {
         super(p_55926_);
         this.registerDefaultState(this.defaultBlockState().setValue(AXIS, Direction.Axis.Y).setValue(TOP, true).setValue(BOTTOM, true));
     }
-
+    /**
+     * Probably should fix this since it crashes the game.
+     */
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-        if (pState.getValue(AXIS) == Direction.Axis.X) {
-            if (pState.getValue(TOP) && pState.getValue(BOTTOM)) {
-                return BOTH_SHAPE_X;
-            } else if (pState.getValue(TOP) && !pState.getValue(BOTTOM)) {
-                return TOP_ONLY_SHAPE_X;
-            } else if (!pState.getValue(TOP) && pState.getValue(BOTTOM)) {
-                return BOTTOM_ONLY_SHAPE_X;
-            } else {
+        switch(pState.getValue(AXIS)) {
+            case X:
+                /*
+                if (pState.getValue(TOP) && pState.getValue(BOTTOM)) {
+                    return BOTH_SHAPE_X;
+                } else if (pState.getValue(TOP) && !pState.getValue(BOTTOM)) {
+                    return TOP_ONLY_SHAPE_X;
+                } else if (!pState.getValue(TOP) && pState.getValue(BOTTOM)) {
+                    return BOTTOM_ONLY_SHAPE_X;
+                }
+                 */
                 return CENTER_SHAPE_X;
-            }
-        } else if (pState.getValue(AXIS) == Direction.Axis.Y) {
-            if (pState.getValue(TOP) && pState.getValue(BOTTOM)) {
-                return BOTH_SHAPE_Y;
-            } else if (pState.getValue(TOP) && !pState.getValue(BOTTOM)) {
-                return TOP_ONLY_SHAPE_Y;
-            } else if (!pState.getValue(TOP) && pState.getValue(BOTTOM)) {
-                return BOTTOM_ONLY_SHAPE_Y;
-            } else {
+            case Y:
+                /*
+                if (pState.getValue(TOP) && pState.getValue(BOTTOM)) {
+                    return BOTH_SHAPE_Y;
+                } else if (pState.getValue(TOP) && !pState.getValue(BOTTOM)) {
+                    return TOP_ONLY_SHAPE_Y;
+                } else if (!pState.getValue(TOP) && pState.getValue(BOTTOM)) {
+                    return BOTTOM_ONLY_SHAPE_Y;
+                }
+                 */
                 return CENTER_SHAPE_Y;
-            }
-        } else if (pState.getValue(AXIS) == Direction.Axis.Z) {
-            if (pState.getValue(TOP) && pState.getValue(BOTTOM)) {
+            case Z:
+                /*
+                if (pState.getValue(TOP) && pState.getValue(BOTTOM)) {
                 return BOTH_SHAPE_Z;
-            } else if (pState.getValue(TOP) && !pState.getValue(BOTTOM)) {
-                return TOP_ONLY_SHAPE_Z;
-            } else if (!pState.getValue(TOP) && pState.getValue(BOTTOM)) {
-                return BOTTOM_ONLY_SHAPE_Z;
-            } else {
+                } else if (pState.getValue(TOP) && !pState.getValue(BOTTOM)) {
+                    return TOP_ONLY_SHAPE_Z;
+                } else if (!pState.getValue(TOP) && pState.getValue(BOTTOM)) {
+                    return BOTTOM_ONLY_SHAPE_Z;
+                }
+                 */
                 return CENTER_SHAPE_Z;
-            }
+            default:
+                return CENTER_SHAPE_Y;
         }
-        return BOTH_SHAPE_Y;
     }
 
     public boolean useShapeForLightOcclusion(BlockState pState) {

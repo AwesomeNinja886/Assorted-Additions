@@ -1,0 +1,6 @@
+{
+  "parent": "assorted_additions:block/chiseled_pillar_middle",
+  "textures": {
+    "column": "minecraft:block/quartz_pillar"
+  }
+}

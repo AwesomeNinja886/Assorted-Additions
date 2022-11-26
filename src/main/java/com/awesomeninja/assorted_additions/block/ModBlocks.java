@@ -54,9 +54,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> SMOOTH_STONE_BRICKS = registerBlock("smooth_stone_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> STONE_TILES = registerBlock("stone_tiles", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> NETHER_BRICK_TILES = registerBlock("nether_brick_tiles", () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHER_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> ELDER_PRISMARINE_BRICKS = registerBlock("elder_prismarine_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.PRISMARINE_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> DARK_ELDER_PRISMARINE = registerBlock("dark_elder_prismarine", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DARK_PRISMARINE)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     // Chiseled Pillars
     public static final RegistryObject<Block> CHISELED_DEEPSLATE_PILLAR = registerBlock("chiseled_deepslate_pillar", () -> new ChiseledPillarBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> CHISELED_QUARTZ_PILLAR = registerBlock("chiseled_quartz_pillar", () -> new ChiseledPillarBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BLOCK)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     // Budding Glowstone
     public static final RegistryObject<Block> BUDDING_GLOWSTONE = registerBlock("budding_glowstone", () -> new BuddingGlowstoneBlock(BlockBehaviour.Properties.copy(Blocks.GLOWSTONE).randomTicks()), CreativeModeTab.TAB_BUILDING_BLOCKS);

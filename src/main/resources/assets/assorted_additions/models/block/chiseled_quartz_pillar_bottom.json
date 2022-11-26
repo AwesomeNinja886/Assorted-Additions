@@ -1,0 +1,8 @@
+{
+  "parent": "assorted_additions:block/chiseled_pillar_bottom",
+  "textures": {
+    "cap": "assorted_additions:block/chiseled_quartz_pillar_cap",
+    "column": "minecraft:block/quartz_pillar",
+    "end": "minecraft:block/quartz_block"
+  }
+}
