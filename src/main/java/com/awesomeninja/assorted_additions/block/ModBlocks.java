@@ -106,6 +106,10 @@ public class ModBlocks {
     // Compacted Items
     public static final RegistryObject<Block> PACKED_LEATHER = registerBlock("packed_leather", () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
+    // Industrial Blocks
+    public static final RegistryObject<Block> INDUSTRIAL_BRICKS = registerBlock("industrial_bricks", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DIRT).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.NETHER_BRICKS)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> CAST_IRON_BLOCK = registerBlock("cast_iron_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL).requiresCorrectToolForDrops().strength(5.5F, 8.0F).sound(SoundType.METAL)), CreativeModeTab.TAB_BUILDING_BLOCKS);
+
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);

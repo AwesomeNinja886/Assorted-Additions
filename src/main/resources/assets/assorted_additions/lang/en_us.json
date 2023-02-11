@@ -44,5 +44,8 @@
     "block.assorted_additions.chorus_trapdoor": "Chorus Trapdoor",
     "block.assorted_additions.chorus_fence_gate": "Chorus Fence Gate",
 
-    "block.assorted_additions.packed_leather": "Packed Leather"
+    "block.assorted_additions.packed_leather": "Packed Leather",
+
+    "block.assorted_additions.industrial_bricks": "Industrial Bricks",
+    "block.assorted_additions.cast_iron_block": "Cast Iron Block"
 }
